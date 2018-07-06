@@ -1,0 +1,11 @@
+{
+  "name": "zorro",
+  "version": "0.0.1",
+  "description": "A heroic helper library",
+  "main": "zorro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diego.morales@gmx.net",
+  "license": "MIT"
+}
