@@ -258,3 +258,12 @@ export const shuffle = (arr) => {
 export const compose = (...functions) => data => functions.reduceRight((value, func) => func(value), data)
 
 export const toGrid = (value, gridSize, offset = 0) => (Math.round((value - offset) / gridSize) * gridSize) + offset
+
+export const arc = (cX, cY, r, deg) => {
+    var rad = (deg - 90) * Math.PI / 180;
+
+    return {
+        x: cX + (r * Math.cos(rad)),
+        y: cY + (r * Math.sin(rad))
+    }
+}
