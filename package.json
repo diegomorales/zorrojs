@@ -2,10 +2,14 @@
   "name": "zorro",
   "version": "0.0.1",
   "description": "A heroic helper library",
-  "main": "zorro.js",
+  "main": "index.js",
   "scripts": {
+    "docs": "jsdoc2md index.js > docs/zorro.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "diego.morales@gmx.net",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^4.0.1"
+  }
 }
