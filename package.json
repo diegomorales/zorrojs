@@ -1,11 +1,20 @@
 {
-  "name": "zorro.js",
+  "name": "zorrojs",
   "version": "0.0.1",
   "description": "A heroic helper library",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape -r babel-register tests/**/*.js | tap-spec"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
 }
