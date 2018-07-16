@@ -1,8 +1,8 @@
 export const toDBFS = (value, maxValue) => {
-    value = value === 0 ? Math.pow(10, -6) : value
-    maxValue = maxValue || 1
+  value = value === 0 ? Math.pow(10, -6) : value
+  maxValue = maxValue || 1
 
-    return 20 * (Math.log(Math.abs(value) / maxValue) / Math.log(10))
+  return 20 * (Math.log(Math.abs(value) / maxValue) / Math.log(10))
 }
 
 export const sumDBFS = (db1, db2) => 20 * (Math.log(Math.pow(10, (db1 / 20)) + Math.pow(10, (db2 / 20)))) / Math.log(10)
@@ -27,16 +27,16 @@ export const round = (number, decimals = 2) => Math.round(number * Math.pow(10, 
  * @returns {number} Returns degree value with one decimal place.
  */
 export const matrix2Deg = (matrixStr) => {
-    if (matrixStr === 'none') {
-        return 0
-    }
+  if (matrixStr === 'none') {
+    return 0
+  }
 
-    let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
-    let a = values[0]
-    let b = values[1]
+  let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
+  let a = values[0]
+  let b = values[1]
 
-    // rounded to one decimal place
-    return round((Math.atan2(Number(b), Number(a)) * (180 / Math.PI)), 1)
+  // rounded to one decimal place
+  return round((Math.atan2(Number(b), Number(a)) * (180 / Math.PI)), 1)
 }
 
 /**
@@ -50,11 +50,11 @@ export const matrix2Deg = (matrixStr) => {
  * @returns {string} Returns matrix string
  */
 export const deg2Matrix = (deg, x = 0, y = 0) => {
-    let matrix
-    let rad = parseFloat(deg) * (Math.PI / 180)
+  let matrix
+  let rad = parseFloat(deg) * (Math.PI / 180)
 
-    matrix = [round(Math.cos(rad), 6), round(Math.sin(rad), 6), -round(Math.sin(rad), 6), round(Math.cos(rad), 6), x, y]
-    return 'matrix(' + matrix.join(', ') + ')'
+  matrix = [round(Math.cos(rad), 6), round(Math.sin(rad), 6), -round(Math.sin(rad), 6), round(Math.cos(rad), 6), x, y]
+  return 'matrix(' + matrix.join(', ') + ')'
 }
 
 /**
@@ -66,22 +66,22 @@ export const deg2Matrix = (deg, x = 0, y = 0) => {
  * @returns {object} Returns object with x and y values
  */
 export const matrix2xy = (matrixStr) => {
-    if (matrixStr === 'none') {
-        return {
-            x: 0,
-            y: 0
-        }
-    }
-
-    let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
-    let e = values[4]
-    let f = values[5]
-
-    // rounded to two decimal places
+  if (matrixStr === 'none') {
     return {
-        x: round(Number(e), 2),
-        y: round(Number(f), 2)
+      x: 0,
+      y: 0
     }
+  }
+
+  let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
+  let e = values[4]
+  let f = values[5]
+
+  // rounded to two decimal places
+  return {
+    x: round(Number(e), 2),
+    y: round(Number(f), 2)
+  }
 }
 
 /**
@@ -98,10 +98,10 @@ export const matrix2xy = (matrixStr) => {
  * @returns {number} Translated target value
  */
 export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, round = 0) => {
-    let dec = Math.pow(10, round)
-    let scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
+  let dec = Math.pow(10, round)
+  let scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
 
-    return Math.round((targetRangeMin + ((srcValue - srcRangeMin) * scale)) * dec) / dec
+  return Math.round((targetRangeMin + ((srcValue - srcRangeMin) * scale)) * dec) / dec
 }
 
 /**
@@ -115,15 +115,15 @@ export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMi
  * @returns {number} Processed value
  */
 export const applyBounds = (value, lowerBound, upperBound) => {
-    if (value < lowerBound) {
-        return lowerBound
-    }
+  if (value < lowerBound) {
+    return lowerBound
+  }
 
-    if (value > upperBound) {
-        return upperBound
-    }
+  if (value > upperBound) {
+    return upperBound
+  }
 
-    return value
+  return value
 }
 
 /**
@@ -149,11 +149,11 @@ export const getStyleValue = (el, style) => window.getComputedStyle(el, null)[st
  * @param {boolean} [useCapture=false] - useCapture flag.
  */
 export const once = (el, eventName, callback, useCapture = false) => {
-    el.addEventListener(eventName, function listener() {
-        callback()
+  el.addEventListener(eventName, function listener () {
+    callback()
 
-        el.removeEventListener(eventName, listener, useCapture)
-    }, useCapture)
+    el.removeEventListener(eventName, listener, useCapture)
+  }, useCapture)
 }
 
 /**
@@ -174,21 +174,21 @@ export const copyObject = (obj) => JSON.parse(JSON.stringify(obj))
  * @returns {string} Transformed value
  */
 export const valueBuilder = (value, options = {}) => {
-    let res = value.toString()
+  let res = value.toString()
 
-    if (options.transformFunc) {
-        res = options.transformFunc(value)
-    }
+  if (options.transformFunc) {
+    res = options.transformFunc(value)
+  }
 
-    if (options.prefix) {
-        res = options.prefix + String(value)
-    }
+  if (options.prefix) {
+    res = options.prefix + String(value)
+  }
 
-    if (options.suffix) {
-        res = String(value) + options.suffix
-    }
+  if (options.suffix) {
+    res = String(value) + options.suffix
+  }
 
-    return res
+  return res
 }
 
 /**
@@ -214,11 +214,11 @@ export const random = (min = 0, max = 100, decimals = 0) => Math.min(Math.floor(
  * @returns {any}
  */
 export const find = (list, predicate, index = 0) => {
-    const isDone = index >= list.length
+  const isDone = index >= list.length
 
-    return isDone
-        ? undefined
-        : predicate(list[index]) ? list[index] : find(list, predicate, ++index)
+  return isDone
+    ? undefined
+    : predicate(list[index]) ? list[index] : find(list, predicate, ++index)
 }
 
 /**
@@ -232,11 +232,11 @@ export const find = (list, predicate, index = 0) => {
  * @returns {number}
  */
 export const findPos = (list, predicate, index = 0) => {
-    const isDone = index >= list.length
+  const isDone = index >= list.length
 
-    return isDone
-        ? -1
-        : predicate(list[index]) ? index : findPos(list, predicate, ++index)
+  return isDone
+    ? -1
+    : predicate(list[index]) ? index : findPos(list, predicate, ++index)
 }
 
 export const last = (list) => list[list.length - 1]
@@ -244,15 +244,15 @@ export const last = (list) => list[list.length - 1]
 export const deg2rad = (deg) => deg * (Math.PI / 180)
 
 export const shuffle = (arr) => {
-    for (let i = arr.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1))
-        let tmp = arr[i]
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1))
+    let tmp = arr[i]
 
-        arr[i] = arr[j]
-        arr[j] = tmp
-    }
+    arr[i] = arr[j]
+    arr[j] = tmp
+  }
 
-    return arr
+  return arr
 }
 
 export const compose = (...functions) => data => functions.reduceRight((value, func) => func(value), data)
@@ -260,10 +260,10 @@ export const compose = (...functions) => data => functions.reduceRight((value, f
 export const toGrid = (value, gridSize, offset = 0) => (Math.round((value - offset) / gridSize) * gridSize) + offset
 
 export const arc = (cX, cY, r, deg) => {
-    var rad = (deg - 90) * Math.PI / 180;
+  let rad = (deg - 90) * Math.PI / 180
 
-    return {
-        x: cX + (r * Math.cos(rad)),
-        y: cY + (r * Math.sin(rad))
-    }
+  return {
+    x: cX + (r * Math.cos(rad)),
+    y: cY + (r * Math.sin(rad))
+  }
 }

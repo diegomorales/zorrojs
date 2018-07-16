@@ -7,13 +7,14 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "test": "tape -r babel-register tests/**/*.js | tap-spec"
+    "test": "standard && tape -r babel-register tests/**/*.js | tap-spec"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "standard": "^11.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   }
