@@ -1,15 +1,20 @@
 {
-  "name": "zorro",
+  "name": "zorrojs",
   "version": "0.0.1",
   "description": "A heroic helper library",
   "main": "index.js",
-  "scripts": {
-    "docs": "jsdoc2md index.js > docs/zorro.md",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">=8.0.0"
   },
-  "author": "diego.morales@gmx.net",
+  "scripts": {
+    "test": "tape -r babel-register tests/**/*.js | tap-spec"
+  },
+  "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
   "devDependencies": {
-    "jsdoc-to-markdown": "^4.0.1"
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }
