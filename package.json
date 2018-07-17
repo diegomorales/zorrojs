@@ -13,8 +13,7 @@
   "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
   "pre-commit": [
-    "test",
-    "doc"
+    "test"
   ],
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
