@@ -4,71 +4,18 @@
  *  @module zorrojs
  * */
 
-/**
- * @function
- *
- * @desc Convert a dB value to dBFS
- *
- * @param {number} value
- * @param {number} maxValue
- *
- * @returns {number} dBFS value
- */
-export const toDBFS = (value, maxValue) => {
-  value = value === 0 ? Math.pow(10, -6) : value
-  maxValue = maxValue || 1
+import { toDBFS } from './src/to-dbfs'
+import { sumDBFS } from './src/sum-dbfs'
+import { round } from './src/round'
+import { matrix2Deg } from './src/matrix-2-deg'
+import { deg2Matrix } from './src/deg-2-matrix'
 
-  return 20 * (Math.log(Math.abs(value) / maxValue) / Math.log(10))
-}
-
-export const sumDBFS = (db1, db2) => 20 * (Math.log(Math.pow(10, (db1 / 20)) + Math.pow(10, (db2 / 20)))) / Math.log(10)
-
-/**
- * @function
- *
- * @desc Rounds a number to given decimal places.
- *
- * @param {number} number - Number to round
- * @param {number} decimals=2 - Decimal places
- * @returns {number} Rounded number
- */
-export const round = (number, decimals = 2) => Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals)
-
-/**
- * Gets rotation in degress from a matrix string.
- *
- * @param {string} matrixStr - Matrix string
- * @returns {number} Returns degree value with one decimal place.
- */
-export const matrix2Deg = (matrixStr) => {
-  if (matrixStr === 'none') {
-    return 0
-  }
-
-  let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
-  let a = values[0]
-  let b = values[1]
-
-  // rounded to one decimal place
-  return round((Math.atan2(Number(b), Number(a)) * (180 / Math.PI)), 1)
-}
-
-/**
- * @function
- *
- * @desc Converts rotation to a matrix string.
- *
- * @param {number} deg - Degree value
- * @param {number} x=0 - Horizontal translation
- * @param {number} y=0 - Vertical translation
- * @returns {string} Returns matrix string
- */
-export const deg2Matrix = (deg, x = 0, y = 0) => {
-  let matrix
-  let rad = parseFloat(deg) * (Math.PI / 180)
-
-  matrix = [round(Math.cos(rad), 6), round(Math.sin(rad), 6), -round(Math.sin(rad), 6), round(Math.cos(rad), 6), x, y]
-  return 'matrix(' + matrix.join(', ') + ')'
+export {
+  toDBFS,
+  sumDBFS,
+  round,
+  matrix2Deg,
+  deg2Matrix
 }
 
 /**

@@ -5,11 +5,7 @@ zorro.js - A heroic helper library
 
 
 * [zorrojs](#module_zorrojs)
-    * [.matrix2Deg](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
     * [.copyObject](#module_zorrojs.copyObject) ⇒ <code>Object</code>
-    * [.toDBFS(value, maxValue)](#module_zorrojs.toDBFS) ⇒ <code>number</code>
-    * [.round(number, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
-    * [.deg2Matrix(deg, x, y)](#module_zorrojs.deg2Matrix) ⇒ <code>string</code>
     * [.matrix2xy(matrixStr)](#module_zorrojs.matrix2xy) ⇒ <code>object</code>
     * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, round)](#module_zorrojs.translateValue) ⇒ <code>number</code>
     * [.applyBounds(value, lowerBound, upperBound)](#module_zorrojs.applyBounds) ⇒ <code>number</code>
@@ -21,18 +17,9 @@ zorro.js - A heroic helper library
     * [.findPos(list, predicate, [index])](#module_zorrojs.findPos) ⇒ <code>number</code>
     * [.last(list)](#module_zorrojs.last) ⇒ <code>any</code>
     * [.deg2rad(degrees)](#module_zorrojs.deg2rad) ⇒ <code>number</code>
-
-<a name="module_zorrojs.matrix2Deg"></a>
-
-### zorrojs.matrix2Deg ⇒ <code>number</code>
-Gets rotation in degress from a matrix string.
-
-**Kind**: static constant of [<code>zorrojs</code>](#module_zorrojs)  
-**Returns**: <code>number</code> - Returns degree value with one decimal place.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| matrixStr | <code>string</code> | Matrix string |
+    * [.round(number, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
+    * [.sumDBFS(dB1, dB2)](#module_zorrojs.sumDBFS) ⇒ <code>number</code>
+    * [.toDBFS(value, maxValue)](#module_zorrojs.toDBFS) ⇒ <code>number</code>
 
 <a name="module_zorrojs.copyObject"></a>
 
@@ -45,46 +32,6 @@ Returns a copy of given object without references.
 | Param | Type | Description |
 | --- | --- | --- |
 | obj | <code>Object</code> | Object |
-
-<a name="module_zorrojs.toDBFS"></a>
-
-### zorrojs.toDBFS(value, maxValue) ⇒ <code>number</code>
-Convert a dB value to dBFS
-
-**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-**Returns**: <code>number</code> - dBFS value  
-
-| Param | Type |
-| --- | --- |
-| value | <code>number</code> | 
-| maxValue | <code>number</code> | 
-
-<a name="module_zorrojs.round"></a>
-
-### zorrojs.round(number, decimals) ⇒ <code>number</code>
-Rounds a number to given decimal places.
-
-**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-**Returns**: <code>number</code> - Rounded number  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| number | <code>number</code> |  | Number to round |
-| decimals | <code>number</code> | <code>2</code> | Decimal places |
-
-<a name="module_zorrojs.deg2Matrix"></a>
-
-### zorrojs.deg2Matrix(deg, x, y) ⇒ <code>string</code>
-Converts rotation to a matrix string.
-
-**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-**Returns**: <code>string</code> - Returns matrix string  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| deg | <code>number</code> |  | Degree value |
-| x | <code>number</code> | <code>0</code> | Horizontal translation |
-| y | <code>number</code> | <code>0</code> | Vertical translation |
 
 <a name="module_zorrojs.matrix2xy"></a>
 
@@ -232,4 +179,43 @@ Converts degrees to radians
 | Param | Type |
 | --- | --- |
 | degrees | <code>number</code> | 
+
+<a name="module_zorrojs.round"></a>
+
+### zorrojs.round(number, decimals) ⇒ <code>number</code>
+Rounds a number to given decimal places.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>number</code> - Rounded number  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| number | <code>number</code> |  | Number to round |
+| decimals | <code>number</code> | <code>2</code> | Decimal places |
+
+<a name="module_zorrojs.sumDBFS"></a>
+
+### zorrojs.sumDBFS(dB1, dB2) ⇒ <code>number</code>
+Sums two dBFS values
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>number</code> - Resulting dBFS value  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| dB1 | <code>number</code> | dBFS value |
+| dB2 | <code>number</code> | dBFS value |
+
+<a name="module_zorrojs.toDBFS"></a>
+
+### zorrojs.toDBFS(value, maxValue) ⇒ <code>number</code>
+(Describe this method)
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>number</code> - dBFS value  
+
+| Param | Type |
+| --- | --- |
+| value | <code>number</code> | 
+| maxValue | <code>number</code> | 
 
