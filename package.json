@@ -7,13 +7,15 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "test": "standard && tape -r babel-register tests/**/*.js | tap-spec"
+    "test": "standard && tape -r babel-register tests/**/*.js | tap-spec",
+    "doc": "jsdoc2md index.js > api.md"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "jsdoc-to-markdown": "^4.0.1",
     "standard": "^11.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"

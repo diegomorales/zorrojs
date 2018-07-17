@@ -1,3 +1,19 @@
+/**
+ * zorro.js - A heroic helper library
+ *
+ *  @module zorrojs
+ * */
+
+/**
+ * @function
+ *
+ * @desc Convert a dB value to dBFS
+ *
+ * @param {number} value
+ * @param {number} maxValue
+ *
+ * @returns {number} dBFS value
+ */
 export const toDBFS = (value, maxValue) => {
   value = value === 0 ? Math.pow(10, -6) : value
   maxValue = maxValue || 1
@@ -19,9 +35,7 @@ export const sumDBFS = (db1, db2) => 20 * (Math.log(Math.pow(10, (db1 / 20)) + M
 export const round = (number, decimals = 2) => Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals)
 
 /**
- * @function
- *
- * @desc Gets rotation in degress from a matrix string.
+ * Gets rotation in degress from a matrix string.
  *
  * @param {string} matrixStr - Matrix string
  * @returns {number} Returns degree value with one decimal place.
@@ -239,8 +253,24 @@ export const findPos = (list, predicate, index = 0) => {
     : predicate(list[index]) ? index : findPos(list, predicate, ++index)
 }
 
+/**
+ * @function
+ *
+ * @desc Return last item of array or array-like object.
+ *
+ * @param {array} list - Iterable object
+ * @returns {any} Last item of iterable object
+ */
 export const last = (list) => list[list.length - 1]
 
+/**
+ * @function
+ *
+ * @desc Converts degrees to radians
+ *
+ * @param {number} degrees
+ * @returns {number} Angle in radians
+ */
 export const deg2rad = (deg) => deg * (Math.PI / 180)
 
 export const shuffle = (arr) => {
