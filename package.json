@@ -8,14 +8,19 @@
   },
   "scripts": {
     "test": "standard && tape -r babel-register tests/**/*.js | tap-spec",
-    "doc": "jsdoc2md index.js > api.md"
+    "doc": "jsdoc2md index.js src/*.js | sed 's/.exports././g' > api.md"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
+  "pre-commit": [
+    "test",
+    "doc"
+  ],
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "jsdoc-to-markdown": "^4.0.1",
+    "pre-commit": "^1.2.2",
     "standard": "^11.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
