@@ -15,6 +15,10 @@
   "pre-commit": [
     "test"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegomorales/zorrojs.git"
+  },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
