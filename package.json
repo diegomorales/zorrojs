@@ -1,6 +1,6 @@
 {
   "name": "zorrojs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A heroic helper library",
   "main": "index.js",
   "engines": {
