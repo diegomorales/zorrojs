@@ -1,3 +1,5 @@
+import { round } from './round'
+
 /**
  * @function
  * @memberof module:zorrojs
@@ -9,9 +11,6 @@
  * @param {number} y=0 - Vertical translation
  * @returns {string} Returns matrix string
  */
-
-import { round } from './round'
-
 export const deg2Matrix = (deg, x = 0, y = 0) => {
   let matrix
   let rad = parseFloat(deg) * (Math.PI / 180)

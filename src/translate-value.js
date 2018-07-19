@@ -1,3 +1,5 @@
+import { round } from './round'
+
 /**
  * @function
  * @memberof module:zorrojs
@@ -9,13 +11,11 @@
  * @param {number} srcRangeMax - Upper bound of source range
  * @param {number} targetRangeMin - Lower bound of target range
  * @param {number} targetRangeMax - Upper bound of target range
- * @param {number} round - Decimal places to round the number to
+ * @param {number} decimals - Decimal places to round the number to
  * @returns {number} Translated target value
  */
-export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, round = 0) => {
-  let dec = Math.pow(10, round)
+export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals = 0) => {
   let scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
 
-  // TODO: Use round method
-  return Math.round((targetRangeMin + ((srcValue - srcRangeMin) * scale)) * dec) / dec
+  return round(targetRangeMin + ((srcValue - srcRangeMin) * scale), decimals)
 }

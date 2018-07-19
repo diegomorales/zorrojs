@@ -1,3 +1,5 @@
+import { round } from './round'
+
 /**
  * @function
  * @memberof module:zorrojs
@@ -7,9 +9,6 @@
  * @param {string} matrixStr - Matrix string
  * @returns {number} Returns degree value with one decimal place.
  */
-
-import { round } from './round'
-
 export const matrix2Deg = (matrixStr) => {
   if (matrixStr === 'none') {
     return 0

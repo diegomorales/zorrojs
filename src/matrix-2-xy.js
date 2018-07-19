@@ -1,3 +1,5 @@
+import { round } from './round'
+
 /**
  * @function
  * @memberof module:zorrojs
@@ -7,9 +9,6 @@
  * @param {string} matrixStr - Matrix string
  * @returns {object} Returns object with x and y values
  */
-
-import { round } from './round'
-
 export const matrix2xy = (matrixStr) => {
   if (matrixStr === 'none') {
     return {
