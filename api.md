@@ -7,17 +7,21 @@ zorro.js - A heroic helper library
 * [zorrojs](#module_zorrojs)
     * [.applyBounds(value, lowerBound, upperBound)](#module_zorrojs.applyBounds) ⇒ <code>number</code>
     * [.copyObject(obj)](#module_zorrojs.copyObject) ⇒ <code>Object</code>
+    * [.deg2Matrix(deg, x, y)](#module_zorrojs.deg2Matrix) ⇒ <code>string</code>
     * [.deg2Rad(degrees)](#module_zorrojs.deg2Rad) ⇒ <code>number</code>
     * [.findPos(list, predicate, [index])](#module_zorrojs.findPos) ⇒ <code>number</code>
     * [.find(list, predicate, [index])](#module_zorrojs.find) ⇒ <code>any</code>
     * [.getStyleValue(el, style)](#module_zorrojs.getStyleValue) ⇒ <code>string</code>
     * [.last(list)](#module_zorrojs.last) ⇒ <code>any</code>
+    * [.matrix2Deg(matrixStr)](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
+    * [.matrix2xy(matrixStr)](#module_zorrojs.matrix2xy) ⇒ <code>object</code>
     * [.once(el, eventName, callback, [useCapture])](#module_zorrojs.once)
     * [.random(min, max, decimals)](#module_zorrojs.random) ⇒ <code>number</code>
     * [.round(number, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
+    * [.shuffle(arr)](#module_zorrojs.shuffle) ⇒ <code>Array</code>
     * [.sumDBFS(dB1, dB2)](#module_zorrojs.sumDBFS) ⇒ <code>number</code>
     * [.toDBFS(value, maxValue)](#module_zorrojs.toDBFS) ⇒ <code>number</code>
-    * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, round)](#module_zorrojs.translateValue) ⇒ <code>number</code>
+    * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals)](#module_zorrojs.translateValue) ⇒ <code>number</code>
     * [.valueBuilder(value, options)](#module_zorrojs.valueBuilder) ⇒ <code>string</code>
 
 <a name="module_zorrojs.applyBounds"></a>
@@ -45,6 +49,20 @@ Returns a copy of given object without references.
 | Param | Type | Description |
 | --- | --- | --- |
 | obj | <code>Object</code> | Object |
+
+<a name="module_zorrojs.deg2Matrix"></a>
+
+### zorrojs.deg2Matrix(deg, x, y) ⇒ <code>string</code>
+Converts rotation to a matrix string.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>string</code> - Returns matrix string  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| deg | <code>number</code> |  | Degree value |
+| x | <code>number</code> | <code>0</code> | Horizontal translation |
+| y | <code>number</code> | <code>0</code> | Vertical translation |
 
 <a name="module_zorrojs.deg2Rad"></a>
 
@@ -109,6 +127,30 @@ Return last item of array or array-like object.
 | --- | --- | --- |
 | list | <code>array</code> | Iterable object |
 
+<a name="module_zorrojs.matrix2Deg"></a>
+
+### zorrojs.matrix2Deg(matrixStr) ⇒ <code>number</code>
+Gets rotation in degress from a matrix string.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>number</code> - Returns degree value with one decimal place.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| matrixStr | <code>string</code> | Matrix string |
+
+<a name="module_zorrojs.matrix2xy"></a>
+
+### zorrojs.matrix2xy(matrixStr) ⇒ <code>object</code>
+Gets x, y position (top/left) from a matrix string, rounded to max. 2 decimal places.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>object</code> - Returns object with x and y values  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| matrixStr | <code>string</code> | Matrix string |
+
 <a name="module_zorrojs.once"></a>
 
 ### zorrojs.once(el, eventName, callback, [useCapture])
@@ -148,7 +190,19 @@ Rounds a number to given decimal places.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | number | <code>number</code> |  | Number to round |
-| decimals | <code>number</code> | <code>2</code> | Decimal places |
+| decimals | <code>number</code> | <code>0</code> | Decimal places |
+
+<a name="module_zorrojs.shuffle"></a>
+
+### zorrojs.shuffle(arr) ⇒ <code>Array</code>
+Shuffles the item order of given array-like object. This method returns a new array. The original object is not mutated.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>Array</code> - Shuffled array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | Array or array-like object |
 
 <a name="module_zorrojs.sumDBFS"></a>
 
@@ -178,7 +232,7 @@ Sums two dBFS values
 
 <a name="module_zorrojs.translateValue"></a>
 
-### zorrojs.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, round) ⇒ <code>number</code>
+### zorrojs.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals) ⇒ <code>number</code>
 Translates a numeric value to a new range.
 
 **Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
@@ -191,7 +245,7 @@ Translates a numeric value to a new range.
 | srcRangeMax | <code>number</code> | Upper bound of source range |
 | targetRangeMin | <code>number</code> | Lower bound of target range |
 | targetRangeMax | <code>number</code> | Upper bound of target range |
-| round | <code>number</code> | Decimal places to round the number to |
+| decimals | <code>number</code> | Decimal places to round the number to |
 
 <a name="module_zorrojs.valueBuilder"></a>
 
