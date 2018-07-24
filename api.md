@@ -13,12 +13,13 @@ zorro.js - A heroic helper library
     * [.find(list, predicate, [index])](#module_zorrojs.find) ⇒ <code>any</code>
     * [.getStyleValue(el, style)](#module_zorrojs.getStyleValue) ⇒ <code>string</code>
     * [.last(list)](#module_zorrojs.last) ⇒ <code>any</code>
-    * [.matrix2Deg(matrixStr)](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
+    * [.matrix2Deg(matrixStr, decimals)](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
     * [.matrix2xy(matrixStr)](#module_zorrojs.matrix2xy) ⇒ <code>object</code>
     * [.once(el, eventName, callback, [useCapture])](#module_zorrojs.once)
     * [.random(min, max, decimals)](#module_zorrojs.random) ⇒ <code>number</code>
     * [.round(number, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
     * [.shuffle(arr)](#module_zorrojs.shuffle) ⇒ <code>Array</code>
+    * [.snapValue(value, distance, offset)](#module_zorrojs.snapValue) ⇒ <code>number</code>
     * [.sumDBFS(dB1, dB2)](#module_zorrojs.sumDBFS) ⇒ <code>number</code>
     * [.toDBFS(value, maxValue)](#module_zorrojs.toDBFS) ⇒ <code>number</code>
     * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals)](#module_zorrojs.translateValue) ⇒ <code>number</code>
@@ -129,15 +130,16 @@ Return last item of array or array-like object.
 
 <a name="module_zorrojs.matrix2Deg"></a>
 
-### zorrojs.matrix2Deg(matrixStr) ⇒ <code>number</code>
-Gets rotation in degress from a matrix string.
+### zorrojs.matrix2Deg(matrixStr, decimals) ⇒ <code>number</code>
+Gets rotation, of z-axis, in degress from a matrix string.
 
 **Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
 **Returns**: <code>number</code> - Returns degree value with one decimal place.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| matrixStr | <code>string</code> | Matrix string |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| matrixStr | <code>string</code> |  | Matrix string |
+| decimals | <code>number</code> | <code>0</code> | Decimal places to round the number to |
 
 <a name="module_zorrojs.matrix2xy"></a>
 
@@ -203,6 +205,19 @@ Shuffles the item order of given array-like object. This method returns a new ar
 | Param | Type | Description |
 | --- | --- | --- |
 | arr | <code>Array</code> | Array or array-like object |
+
+<a name="module_zorrojs.snapValue"></a>
+
+### zorrojs.snapValue(value, distance, offset) ⇒ <code>number</code>
+Snap a value to given value distance.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+
+| Param | Type |
+| --- | --- |
+| value | <code>number</code> | 
+| distance | <code>number</code> | 
+| offset | <code>number</code> | 
 
 <a name="module_zorrojs.sumDBFS"></a>
 
