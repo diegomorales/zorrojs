@@ -2,10 +2,10 @@
  * @function
  * @memberof module:zorrojs
  *
- * @desc Rounds a number to given decimal places.
+ * @desc Rounds a numeric value to given decimal places.
  *
- * @param {number} number - Number to round
+ * @param {number} value - Value to round
  * @param {number} decimals=0 - Decimal places
- * @returns {number} Rounded number
+ * @returns {number}
  */
-export const round = (number, decimals = 0) => Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals)
+export const round = ({value, decimals = 0}) => Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals)

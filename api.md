@@ -17,7 +17,7 @@ zorro.js - A heroic helper library
     * [.matrix2xy(matrixStr)](#module_zorrojs.matrix2xy) ⇒ <code>object</code>
     * [.once(el, eventName, callback, [useCapture])](#module_zorrojs.once)
     * [.random(min, max, decimals)](#module_zorrojs.random) ⇒ <code>number</code>
-    * [.round(number, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
+    * [.round(value, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
     * [.shuffle(arr)](#module_zorrojs.shuffle) ⇒ <code>Array</code>
     * [.snapValue(value, distance, offset)](#module_zorrojs.snapValue) ⇒ <code>number</code>
     * [.sumDBFS(dB1, dB2)](#module_zorrojs.sumDBFS) ⇒ <code>number</code>
@@ -183,15 +183,14 @@ Returns a random value between two numbers, min and max value included.
 
 <a name="module_zorrojs.round"></a>
 
-### zorrojs.round(number, decimals) ⇒ <code>number</code>
-Rounds a number to given decimal places.
+### zorrojs.round(value, decimals) ⇒ <code>number</code>
+Rounds a numeric value to given decimal places.
 
 **Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-**Returns**: <code>number</code> - Rounded number  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| number | <code>number</code> |  | Number to round |
+| value | <code>number</code> |  | Value to round |
 | decimals | <code>number</code> | <code>0</code> | Decimal places |
 
 <a name="module_zorrojs.shuffle"></a>
