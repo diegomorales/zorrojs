@@ -23,7 +23,7 @@ import { last } from './src/last'
 import { deg2Rad } from './src/deg-2-rad'
 import { shuffle } from './src/shuffle'
 import { compose } from './src/compose'
-import { toGrid } from './src/to-grid'
+import { snapValue } from './src/snap-value'
 import { arc } from './src/arc'
 
 export {
@@ -46,6 +46,6 @@ export {
   deg2Rad,
   shuffle,
   compose,
-  toGrid,
+  snapValue,
   arc
 }
