@@ -26,6 +26,7 @@ import { compose } from './src/compose'
 import { snapValue } from './src/snap-value'
 import { arc } from './src/arc'
 import { animateProps } from './src/animate-props'
+import * as easings from './src/easings'
 
 export {
   toDBFS,
@@ -49,5 +50,6 @@ export {
   compose,
   snapValue,
   arc,
-  animateProps
+  animateProps,
+  easings
 }
