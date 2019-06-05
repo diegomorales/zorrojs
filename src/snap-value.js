@@ -9,4 +9,4 @@
  * @param {number} offset
  * @returns {number}
  */
-export const snapValue = ({value, distance, offset = 0}) => (Math.round((value - offset) / distance) * distance) + offset
+export const snapValue = ({ value, distance, offset = 0 }) => (Math.round((value - offset) / distance) * distance) + offset

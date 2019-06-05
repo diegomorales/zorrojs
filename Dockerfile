@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10-alpine
 
 RUN mkdir -p /home/node/code
 
@@ -7,5 +7,3 @@ RUN npm i -g npm
 USER node
 
 WORKDIR /home/node/code
-
-RUN echo 'alias ll="ls -la"' >> /home/node/.bashrc

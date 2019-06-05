@@ -9,7 +9,7 @@
  * @param {number} upperBound - Upper bound
  * @returns {number} Processed value
  */
-export const applyBounds = ({value, lowerBound, upperBound}) => {
+export const applyBounds = ({ value, lowerBound, upperBound }) => {
   if (value < lowerBound) {
     return lowerBound
   }
