@@ -25,6 +25,7 @@ import { shuffle } from './src/shuffle'
 import { compose } from './src/compose'
 import { snapValue } from './src/snap-value'
 import { arc } from './src/arc'
+import { animateProps } from './src/animate-props'
 
 export {
   toDBFS,
@@ -47,5 +48,6 @@ export {
   shuffle,
   compose,
   snapValue,
-  arc
+  arc,
+  animateProps
 }

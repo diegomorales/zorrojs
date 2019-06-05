@@ -8,7 +8,7 @@
   },
   "scripts": {
     "fix": "standard --fix",
-    "test": "standard && tape -r @babel/register tests/**/*.js | tap-spec",
+    "test": "standard --fix && tape -r @babel/register tests/**/*.js | tap-spec",
     "doc": "jsdoc2md index.js src/*.js | sed 's/.exports././g' > api.md"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",
@@ -24,6 +24,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
+    "browser-env": "^3.2.6",
     "jsdoc-to-markdown": "^5.0.0",
     "pre-commit": "^1.2.2",
     "standard": "^12.0.1",
