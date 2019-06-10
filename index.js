@@ -27,6 +27,8 @@ import { snapValue } from './src/snap-value'
 import { arc } from './src/arc'
 import { animateProps } from './src/animate-props'
 import * as easings from './src/easings'
+import { setStyles } from './src/set-styles'
+import { clearStyles } from './src/clear-styles'
 
 export {
   toDBFS,
@@ -51,5 +53,7 @@ export {
   snapValue,
   arc,
   animateProps,
-  easings
+  easings,
+  setStyles,
+  clearStyles
 }
