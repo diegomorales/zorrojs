@@ -29,6 +29,7 @@ import { animateProps } from './src/animate-props'
 import * as easings from './src/easings'
 import { setStyles } from './src/set-styles'
 import { clearStyles } from './src/clear-styles'
+import {str2dom} from './src/str-2-dom'
 
 export {
   toDBFS,
@@ -55,5 +56,6 @@ export {
   animateProps,
   easings,
   setStyles,
-  clearStyles
+  clearStyles,
+  str2dom
 }
