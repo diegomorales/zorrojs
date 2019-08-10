@@ -8,7 +8,8 @@
   },
   "scripts": {
     "fix": "standard --fix",
-    "test": "standard --fix && git add -A && tape -r @babel/register tests/**/*.js | tap-spec",
+    "test": "tape -r @babel/register tests/**/*.js | tap-spec",
+    "build": "standard --fix && git add -A && tape -r @babel/register tests/**/*.js | tap-spec",
     "doc": "jsdoc2md index.js src/*.js | sed 's/.exports././g' > api.md"
   },
   "author": "Diego Morales <diego.morales@gmx.net>",

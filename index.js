@@ -30,6 +30,7 @@ import * as easings from './src/easings'
 import { setStyles } from './src/set-styles'
 import { clearStyles } from './src/clear-styles'
 import { str2dom } from './src/str-2-dom'
+import { merge } from './src/merge'
 
 export {
   toDBFS,
@@ -57,5 +58,6 @@ export {
   easings,
   setStyles,
   clearStyles,
-  str2dom
+  str2dom,
+  merge
 }

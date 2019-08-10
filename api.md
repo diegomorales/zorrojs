@@ -1,3 +1,20 @@
+## Modules
+
+<dl>
+<dt><a href="#module_zorrojs">zorrojs</a></dt>
+<dd><p>zorro.js - A heroic helper library</p>
+</dd>
+</dl>
+
+## Constants
+
+<dl>
+<dt><a href="#animateProps">animateProps</a></dt>
+<dd><p>Animate multiple props on an element
+(Heavily inspired by GSAPs TweenLite.to method.)</p>
+</dd>
+</dl>
+
 <a name="module_zorrojs"></a>
 
 ## zorrojs
@@ -15,6 +32,7 @@ zorro.js - A heroic helper library
     * [.last(list)](#module_zorrojs.last) ⇒ <code>any</code>
     * [.matrix2Deg(matrixStr, decimals)](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
     * [.matrix2xy(matrixStr)](#module_zorrojs.matrix2xy) ⇒ <code>object</code>
+    * [.merge()](#module_zorrojs.merge) ⇒ <code>Object</code>
     * [.once(el, eventName, callback, [useCapture])](#module_zorrojs.once)
     * [.random(min, max, decimals)](#module_zorrojs.random) ⇒ <code>number</code>
     * [.round(value, decimals)](#module_zorrojs.round) ⇒ <code>number</code>
@@ -153,6 +171,13 @@ Gets x, y position (top/left) from a matrix string, rounded to max. 2 decimal pl
 | --- | --- | --- |
 | matrixStr | <code>string</code> | Matrix string |
 
+<a name="module_zorrojs.merge"></a>
+
+### zorrojs.merge() ⇒ <code>Object</code>
+Deep merge objects. Pass at least two objects to merge. Objects are fro right to left, similar to Object.assign
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>Object</code> - Merged object  
 <a name="module_zorrojs.once"></a>
 
 ### zorrojs.once(el, eventName, callback, [useCapture])
@@ -273,4 +298,25 @@ Little helper to create value formats
 | --- | --- |
 | value | <code>number</code> | 
 | options | <code>object</code> | 
+
+<a name="animateProps"></a>
+
+## animateProps
+Animate multiple props on an element
+(Heavily inspired by GSAPs TweenLite.to method.)
+
+**Kind**: global constant  
+
+| Param |
+| --- |
+| el | 
+| duration | 
+| props | 
+| easing | 
+| delay | 
+| settle | 
+| onAbort | 
+| onStart | 
+| onComplete | 
+| onUpdate | 
 
