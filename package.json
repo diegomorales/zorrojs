@@ -15,7 +15,7 @@
   "author": "Diego Morales <diego.morales@gmx.net>",
   "license": "MIT",
   "pre-commit": [
-    "test"
+    "build"
   ],
   "repository": {
     "type": "git",
