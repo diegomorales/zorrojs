@@ -15,6 +15,14 @@ export const deg2Matrix = (deg, x = 0, y = 0) => {
   let matrix
   let rad = parseFloat(deg) * (Math.PI / 180)
 
-  matrix = [round(Math.cos(rad), 6), round(Math.sin(rad), 6), -round(Math.sin(rad), 6), round(Math.cos(rad), 6), x, y]
+  matrix = [
+    round({ value: Math.cos(rad), decimals: 6 }),
+    round({ value: Math.sin(rad), decimals: 6 }),
+    -round({ value: Math.sin(rad), decimals: 6 }),
+    round({ value: Math.cos(rad), decimals: 6 }),
+    x,
+    y
+  ]
+
   return 'matrix(' + matrix.join(', ') + ')'
 }
