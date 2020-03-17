@@ -4,16 +4,16 @@ import { translateValue } from './translate-value'
  * Animate multiple props on an element
  * (Heavily inspired by GSAPs TweenLite.to method.)
  *
- * @param el
- * @param duration
- * @param props
- * @param easing
- * @param delay
- * @param settle
- * @param onAbort
- * @param onStart
- * @param onComplete
- * @param onUpdate
+ * @param {Array|Element} el
+ * @param {number} duration
+ * @param {Array} props
+ * @param {Function} easing
+ * @param {number} delay
+ * @param {number} settle
+ * @param {Function} onAbort
+ * @param {Function} onStart
+ * @param {Function} onComplete
+ * @param {Function} onUpdate
  */
 export const animateProps = ({ el, duration, props, easing, delay, settle, onAbort, onStart, onComplete, onUpdate }) => {
   if (el === undefined || duration === undefined || props === undefined) {
