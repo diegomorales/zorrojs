@@ -1,3 +1,9 @@
+/**
+ * Clear style definitions of elements
+ *
+ * @param elements
+ * @param styles
+ */
 export const clearStyles = (elements, styles) => {
   if (elements instanceof window.HTMLElement) {
     elements = [elements]
