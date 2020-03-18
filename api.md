@@ -29,8 +29,6 @@ zorro.js - A heroic helper library
     * [.copyObject(obj)](#module_zorrojs.copyObject) ⇒ <code>Object</code>
     * [.deg2Matrix(deg, x, y)](#module_zorrojs.deg2Matrix) ⇒ <code>string</code>
     * [.deg2Rad(deg)](#module_zorrojs.deg2Rad) ⇒ <code>number</code>
-    * [.findPos(list, predicate, [index])](#module_zorrojs.findPos) ⇒ <code>number</code>
-    * [.find(list, predicate, [index])](#module_zorrojs.find) ⇒ <code>any</code>
     * [.getStyleValue(el, style)](#module_zorrojs.getStyleValue) ⇒ <code>string</code>
     * [.last(list)](#module_zorrojs.last) ⇒ <code>any</code>
     * [.matrix2Deg(matrixStr, decimals)](#module_zorrojs.matrix2Deg) ⇒ <code>number</code>
@@ -43,7 +41,7 @@ zorro.js - A heroic helper library
     * [.snapValue(value, distance, offset)](#module_zorrojs.snapValue) ⇒ <code>number</code>
     * [.sumDBFS(dB1, dB2)](#module_zorrojs.sumDBFS) ⇒ <code>number</code>
     * [.toDBFS(value, maxValue)](#module_zorrojs.toDBFS) ⇒ <code>number</code>
-    * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals)](#module_zorrojs.translateValue) ⇒ <code>number</code>
+    * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, [decimals])](#module_zorrojs.translateValue) ⇒ <code>number</code>
     * [.valueBuilder(value, options)](#module_zorrojs.valueBuilder) ⇒ <code>string</code>
 
 <a name="module_zorrojs.applyBounds"></a>
@@ -97,32 +95,6 @@ Converts degrees to radians
 | Param | Type |
 | --- | --- |
 | deg | <code>number</code> | 
-
-<a name="module_zorrojs.findPos"></a>
-
-### zorrojs.findPos(list, predicate, [index]) ⇒ <code>number</code>
-Returns index of element in array which matches the given condition.
-
-**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-
-| Param | Type |
-| --- | --- |
-| list | <code>array</code> | 
-| predicate | <code>function</code> | 
-| [index] | <code>number</code> | 
-
-<a name="module_zorrojs.find"></a>
-
-### zorrojs.find(list, predicate, [index]) ⇒ <code>any</code>
-Returns first element in array which matches the given condition.
-
-**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
-
-| Param | Type |
-| --- | --- |
-| list | <code>array</code> | 
-| predicate | <code>function</code> | 
-| [index] | <code>number</code> | 
 
 <a name="module_zorrojs.getStyleValue"></a>
 
@@ -274,20 +246,20 @@ Sums two dBFS values
 
 <a name="module_zorrojs.translateValue"></a>
 
-### zorrojs.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals) ⇒ <code>number</code>
+### zorrojs.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, [decimals]) ⇒ <code>number</code>
 Translates a numeric value to a new range.
 
 **Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
 **Returns**: <code>number</code> - Translated target value  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| srcValue | <code>number</code> | Original value within give source range |
-| srcRangeMin | <code>number</code> | Lower bound of source range |
-| srcRangeMax | <code>number</code> | Upper bound of source range |
-| targetRangeMin | <code>number</code> | Lower bound of target range |
-| targetRangeMax | <code>number</code> | Upper bound of target range |
-| decimals | <code>number</code> | Decimal places to round the number to |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| srcValue | <code>number</code> |  | Original value within give source range |
+| srcRangeMin | <code>number</code> |  | Lower bound of source range |
+| srcRangeMax | <code>number</code> |  | Upper bound of source range |
+| targetRangeMin | <code>number</code> |  | Lower bound of target range |
+| targetRangeMax | <code>number</code> |  | Upper bound of target range |
+| [decimals] | <code>number</code> | <code>0</code> | Decimal places to round the number to |
 
 <a name="module_zorrojs.valueBuilder"></a>
 
