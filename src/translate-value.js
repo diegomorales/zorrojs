@@ -11,14 +11,11 @@ import { round } from './round'
  * @param {number} srcRangeMax - Upper bound of source range
  * @param {number} targetRangeMin - Lower bound of target range
  * @param {number} targetRangeMax - Upper bound of target range
- * @param {number} decimals - Decimal places to round the number to
+ * @param {number} [decimals=0] - Decimal places to round the number to
  * @returns {number} Translated target value
  */
 export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals = 0) => {
   let scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
 
-  return round({
-    value: targetRangeMin + ((srcValue - srcRangeMin) * scale),
-    decimals
-  })
+  return round(targetRangeMin + ((srcValue - srcRangeMin) * scale), decimals)
 }

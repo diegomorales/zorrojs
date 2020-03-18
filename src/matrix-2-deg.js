@@ -20,8 +20,5 @@ export const matrix2Deg = (matrixStr, decimals = 0) => {
   let b = values[1]
 
   // rounded to one decimal place
-  return round({
-    value: Math.atan2(Number(b), Number(a)) * (180 / Math.PI),
-    decimals
-  })
+  return round(Math.atan2(Number(b), Number(a)) * (180 / Math.PI), decimals)
 }

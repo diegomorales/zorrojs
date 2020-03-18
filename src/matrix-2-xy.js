@@ -23,7 +23,7 @@ export const matrix2xy = (matrixStr) => {
 
   // rounded to two decimal places
   return {
-    x: round({ value: Number(e), decimals: 2 }),
-    y: round({ value: Number(f), decimals: 2 })
+    x: round(Number(e), 2),
+    y: round(Number(f), 2)
   }
 }
