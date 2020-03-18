@@ -17,8 +17,6 @@ import { once } from './src/once'
 import { copyObject } from './src/copy-object'
 import { valueBuilder } from './src/value-builder'
 import { random } from './src/random'
-import { find } from './src/find'
-import { findPos } from './src/find-pos'
 import { last } from './src/last'
 import { deg2Rad } from './src/deg-2-rad'
 import { shuffle } from './src/shuffle'
@@ -47,8 +45,6 @@ export {
   copyObject,
   valueBuilder,
   random,
-  find,
-  findPos,
   last,
   deg2Rad,
   shuffle,

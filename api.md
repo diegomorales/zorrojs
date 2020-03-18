@@ -13,6 +13,9 @@
 <dd><p>Animate multiple props on an element
 (Heavily inspired by GSAPs TweenLite.to method.)</p>
 </dd>
+<dt><a href="#clearStyles">clearStyles</a></dt>
+<dd><p>Clear style definitions of elements</p>
+</dd>
 </dl>
 
 <a name="module_zorrojs"></a>
@@ -25,7 +28,7 @@ zorro.js - A heroic helper library
     * [.applyBounds(value, lowerBound, upperBound)](#module_zorrojs.applyBounds) ⇒ <code>number</code>
     * [.copyObject(obj)](#module_zorrojs.copyObject) ⇒ <code>Object</code>
     * [.deg2Matrix(deg, x, y)](#module_zorrojs.deg2Matrix) ⇒ <code>string</code>
-    * [.deg2Rad(degrees)](#module_zorrojs.deg2Rad) ⇒ <code>number</code>
+    * [.deg2Rad(deg)](#module_zorrojs.deg2Rad) ⇒ <code>number</code>
     * [.findPos(list, predicate, [index])](#module_zorrojs.findPos) ⇒ <code>number</code>
     * [.find(list, predicate, [index])](#module_zorrojs.find) ⇒ <code>any</code>
     * [.getStyleValue(el, style)](#module_zorrojs.getStyleValue) ⇒ <code>string</code>
@@ -85,7 +88,7 @@ Converts rotation to a matrix string.
 
 <a name="module_zorrojs.deg2Rad"></a>
 
-### zorrojs.deg2Rad(degrees) ⇒ <code>number</code>
+### zorrojs.deg2Rad(deg) ⇒ <code>number</code>
 Converts degrees to radians
 
 **Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
@@ -93,7 +96,7 @@ Converts degrees to radians
 
 | Param | Type |
 | --- | --- |
-| degrees | <code>number</code> | 
+| deg | <code>number</code> | 
 
 <a name="module_zorrojs.findPos"></a>
 
@@ -307,16 +310,28 @@ Animate multiple props on an element
 
 **Kind**: global constant  
 
+| Param | Type |
+| --- | --- |
+| el | <code>Array</code> \| <code>Element</code> | 
+| duration | <code>number</code> | 
+| props | <code>Array</code> | 
+| easing | <code>function</code> | 
+| delay | <code>number</code> | 
+| settle | <code>number</code> | 
+| onAbort | <code>function</code> | 
+| onStart | <code>function</code> | 
+| onComplete | <code>function</code> | 
+| onUpdate | <code>function</code> | 
+
+<a name="clearStyles"></a>
+
+## clearStyles
+Clear style definitions of elements
+
+**Kind**: global constant  
+
 | Param |
 | --- |
-| el | 
-| duration | 
-| props | 
-| easing | 
-| delay | 
-| settle | 
-| onAbort | 
-| onStart | 
-| onComplete | 
-| onUpdate | 
+| elements | 
+| styles | 
 
