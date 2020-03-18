@@ -1,5 +1,5 @@
-let test = require('tape')
-let applyBounds = require('../').applyBounds
+const test = require('tape')
+const applyBounds = require('../').applyBounds
 
 test('"applyBounds" method', (t) => {
   t.plan(3)

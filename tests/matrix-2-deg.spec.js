@@ -1,9 +1,9 @@
-let test = require('tape')
-let matrix2Deg = require('../').matrix2Deg
+const test = require('tape')
+const matrix2Deg = require('../').matrix2Deg
 
-let matrix45deg = 'matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)'
-let matrix30deg = 'matrix(0.866025, -0.5, 0.5, 0.866025, 104.934, -44.6488)'
-let matrix66deg = 'matrix(0.39608, 0.918216, -0.918216, 0.39608, 0, 0)'
+const matrix45deg = 'matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)'
+const matrix30deg = 'matrix(0.866025, -0.5, 0.5, 0.866025, 104.934, -44.6488)'
+const matrix66deg = 'matrix(0.39608, 0.918216, -0.918216, 0.39608, 0, 0)'
 
 test('"matrix2Deg" method', (t) => {
   t.plan(3)

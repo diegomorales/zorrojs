@@ -1,10 +1,10 @@
 let lastTime = 0
-let startTime = new Date().getTime()
+const startTime = new Date().getTime()
 
 window.requestAnimationFrame = function (cbFunc) {
-  let currTime = new Date().getTime()
-  let timeToCall = Math.max(0, 16 - (currTime - lastTime))
-  let id = setTimeout(function () {
+  const currTime = new Date().getTime()
+  const timeToCall = Math.max(0, 16 - (currTime - lastTime))
+  const id = setTimeout(function () {
     cbFunc((currTime + timeToCall) - startTime)
   },
   timeToCall)

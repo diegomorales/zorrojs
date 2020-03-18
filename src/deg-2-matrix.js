@@ -12,10 +12,9 @@ import { round } from './round'
  * @returns {string} Returns matrix string
  */
 export const deg2Matrix = (deg, x = 0, y = 0) => {
-  let matrix
-  let rad = parseFloat(deg) * (Math.PI / 180)
+  const rad = parseFloat(deg) * (Math.PI / 180)
 
-  matrix = [
+  const matrix = [
     round(Math.cos(rad), 6),
     round(Math.sin(rad), 6),
     -round(Math.sin(rad), 6),

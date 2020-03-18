@@ -1,7 +1,7 @@
-let test = require('tape')
-let last = require('../').last
+const test = require('tape')
+const last = require('../').last
 
-let testArray = ['a', 'b', 'c']
+const testArray = ['a', 'b', 'c']
 
 test('"last" method', (t) => {
   t.plan(1)

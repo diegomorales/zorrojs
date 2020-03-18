@@ -1,8 +1,8 @@
 require('browser-env')(['window', 'document'])
 require('../polyfills/raf')
 
-let test = require('tape')
-let animateProps = require('../').animateProps
+const test = require('tape')
+const animateProps = require('../').animateProps
 
 test('"animateProps" method', (t) => {
   t.plan(2)
@@ -26,8 +26,8 @@ test('"animateProps" method', (t) => {
       }
     ],
     onComplete: () => {
-      t.equal(dummyEl.style['opacity'], '1', 'Animated property to correct end value.')
-      t.equal(dummyEl.style['height'], '20%', 'Animated second property to correct end value.')
+      t.equal(dummyEl.style.opacity, '1', 'Animated property to correct end value.')
+      t.equal(dummyEl.style.height, '20%', 'Animated second property to correct end value.')
     }
   })
 })

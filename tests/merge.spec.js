@@ -1,5 +1,5 @@
-let test = require('tape')
-let merge = require('../').merge
+const test = require('tape')
+const merge = require('../').merge
 
 const obj1 = { a: 1, z: { x: 100, w: 'w' } }
 const obj2 = { b: 'b' }

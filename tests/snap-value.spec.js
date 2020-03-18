@@ -1,5 +1,5 @@
-let test = require('tape')
-let snapValue = require('../').snapValue
+const test = require('tape')
+const snapValue = require('../').snapValue
 
 test('"snapValue" method', (t) => {
   t.plan(2)

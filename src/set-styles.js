@@ -4,8 +4,8 @@ export const setStyles = (elements, styles) => {
   }
 
   const set = (el, stylesObj) => {
-    for (let p in stylesObj) {
-      if (stylesObj.hasOwnProperty(p)) {
+    for (const p in stylesObj) {
+      if (Object.prototype.hasOwnProperty.call(stylesObj, p)) {
         el.style[p] = stylesObj[p]
       }
     }

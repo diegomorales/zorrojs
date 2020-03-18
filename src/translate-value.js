@@ -15,7 +15,7 @@ import { round } from './round'
  * @returns {number} Translated target value
  */
 export const translateValue = (srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, decimals = 0) => {
-  let scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
+  const scale = (targetRangeMax - targetRangeMin) / (srcRangeMax - srcRangeMin)
 
   return round(targetRangeMin + ((srcValue - srcRangeMin) * scale), decimals)
 }

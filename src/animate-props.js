@@ -24,7 +24,6 @@ export const animateProps = ({ el, duration, props, easing, delay, settle, onAbo
     el = [el]
   }
 
-  let startTime
   let value
   let renderId
   let started = false
@@ -46,7 +45,7 @@ export const animateProps = ({ el, duration, props, easing, delay, settle, onAbo
   }
 
   const setProps = (ts) => {
-    let pos = (ts - startTime) / duration
+    const pos = (ts - startTime) / duration
 
     for (let i = 0; i < props.length; i++) {
       set({ ...props[i], pos })
@@ -89,7 +88,7 @@ export const animateProps = ({ el, duration, props, easing, delay, settle, onAbo
     renderId = window.requestAnimationFrame(anim)
   }
 
-  startTime = window.performance.now() + delay
+  const startTime = window.performance.now() + delay
   renderId = window.requestAnimationFrame(anim)
 
   return {

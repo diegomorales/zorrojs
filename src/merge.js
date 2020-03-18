@@ -10,8 +10,8 @@ export const merge = function () {
   const merged = {}
 
   const assign = (obj) => {
-    for (let p in obj) {
-      if (obj.hasOwnProperty(p)) {
+    for (const p in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, p)) {
         if (Object.prototype.toString.call(obj[p]) === '[object Object]') {
           merged[p] = merge(merged[p], obj[p])
         } else {

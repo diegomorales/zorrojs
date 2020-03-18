@@ -1,5 +1,5 @@
-let test = require('tape')
-let translateValue = require('../').translateValue
+const test = require('tape')
+const translateValue = require('../').translateValue
 
 test('"translateValue" method', (t) => {
   t.plan(4)

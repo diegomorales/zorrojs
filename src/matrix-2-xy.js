@@ -17,9 +17,9 @@ export const matrix2xy = (matrixStr) => {
     }
   }
 
-  let values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
-  let e = values[4]
-  let f = values[5]
+  const values = ((matrixStr.split('(')[1]).split(')')[0]).split(',')
+  const e = values[4]
+  const f = values[5]
 
   // rounded to two decimal places
   return {

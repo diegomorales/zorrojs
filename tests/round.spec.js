@@ -1,5 +1,5 @@
-let test = require('tape')
-let round = require('../').round
+const test = require('tape')
+const round = require('../').round
 
 test('"round" method', (t) => {
   t.plan(4)
