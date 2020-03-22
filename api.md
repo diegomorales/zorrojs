@@ -1,23 +1,3 @@
-## Modules
-
-<dl>
-<dt><a href="#module_zorrojs">zorrojs</a></dt>
-<dd><p>zorro.js - A heroic helper library</p>
-</dd>
-</dl>
-
-## Constants
-
-<dl>
-<dt><a href="#animateProps">animateProps</a></dt>
-<dd><p>Animate multiple props on an element
-(Heavily inspired by GSAPs TweenLite.to method.)</p>
-</dd>
-<dt><a href="#clearStyles">clearStyles</a></dt>
-<dd><p>Clear style definitions of elements</p>
-</dd>
-</dl>
-
 <a name="module_zorrojs"></a>
 
 ## zorrojs
@@ -25,7 +5,10 @@ zorro.js - A heroic helper library
 
 
 * [zorrojs](#module_zorrojs)
+    * [.animateProps(el, duration, props, easing, delay, settle, onAbort, onStart, onComplete, onUpdate)](#module_zorrojs.animateProps)
     * [.applyBounds(value, lowerBound, upperBound)](#module_zorrojs.applyBounds) ⇒ <code>number</code>
+    * [.clearStyles(elements, styles)](#module_zorrojs.clearStyles)
+    * [.compareArrays(arr1, arr2)](#module_zorrojs.compareArrays) ⇒ <code>boolean</code>
     * [.copyObject(obj)](#module_zorrojs.copyObject) ⇒ <code>Object</code>
     * [.deg2Matrix(deg, x, y)](#module_zorrojs.deg2Matrix) ⇒ <code>string</code>
     * [.deg2Rad(deg)](#module_zorrojs.deg2Rad) ⇒ <code>number</code>
@@ -44,6 +27,27 @@ zorro.js - A heroic helper library
     * [.translateValue(srcValue, srcRangeMin, srcRangeMax, targetRangeMin, targetRangeMax, [decimals])](#module_zorrojs.translateValue) ⇒ <code>number</code>
     * [.valueBuilder(value, options)](#module_zorrojs.valueBuilder) ⇒ <code>string</code>
 
+<a name="module_zorrojs.animateProps"></a>
+
+### zorrojs.animateProps(el, duration, props, easing, delay, settle, onAbort, onStart, onComplete, onUpdate)
+Animate multiple props on an element
+(Heavily inspired by GSAPs TweenLite.to method.)
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+
+| Param | Type |
+| --- | --- |
+| el | <code>Array</code> \| <code>Element</code> | 
+| duration | <code>number</code> | 
+| props | <code>Array</code> | 
+| easing | <code>function</code> | 
+| delay | <code>number</code> | 
+| settle | <code>number</code> | 
+| onAbort | <code>function</code> | 
+| onStart | <code>function</code> | 
+| onComplete | <code>function</code> | 
+| onUpdate | <code>function</code> | 
+
 <a name="module_zorrojs.applyBounds"></a>
 
 ### zorrojs.applyBounds(value, lowerBound, upperBound) ⇒ <code>number</code>
@@ -57,6 +61,33 @@ Apply Bounds to a numeric value.
 | value | <code>number</code> | Number |
 | lowerBound | <code>number</code> | Lower bound |
 | upperBound | <code>number</code> | Upper bound |
+
+<a name="module_zorrojs.clearStyles"></a>
+
+### zorrojs.clearStyles(elements, styles)
+Clear style definitions of elements
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+
+| Param |
+| --- |
+| elements | 
+| styles | 
+
+<a name="module_zorrojs.compareArrays"></a>
+
+### zorrojs.compareArrays(arr1, arr2) ⇒ <code>boolean</code>
+Compares two arrays.
+
+Arrays are equal if they have same length and equal items in the same order.
+
+**Kind**: static method of [<code>zorrojs</code>](#module_zorrojs)  
+**Returns**: <code>boolean</code> - True if arrays are equal  
+
+| Param | Type |
+| --- | --- |
+| arr1 | <code>Array</code> | 
+| arr2 | <code>Array</code> | 
 
 <a name="module_zorrojs.copyObject"></a>
 
@@ -273,37 +304,4 @@ Little helper to create value formats
 | --- | --- |
 | value | <code>number</code> | 
 | options | <code>object</code> | 
-
-<a name="animateProps"></a>
-
-## animateProps
-Animate multiple props on an element
-(Heavily inspired by GSAPs TweenLite.to method.)
-
-**Kind**: global constant  
-
-| Param | Type |
-| --- | --- |
-| el | <code>Array</code> \| <code>Element</code> | 
-| duration | <code>number</code> | 
-| props | <code>Array</code> | 
-| easing | <code>function</code> | 
-| delay | <code>number</code> | 
-| settle | <code>number</code> | 
-| onAbort | <code>function</code> | 
-| onStart | <code>function</code> | 
-| onComplete | <code>function</code> | 
-| onUpdate | <code>function</code> | 
-
-<a name="clearStyles"></a>
-
-## clearStyles
-Clear style definitions of elements
-
-**Kind**: global constant  
-
-| Param |
-| --- |
-| elements | 
-| styles | 
 

@@ -1,5 +1,8 @@
 /**
- * Clear style definitions of elements
+ * @function
+ * @memberof module:zorrojs
+ *
+ * @desc Clear style definitions of elements
  *
  * @param elements
  * @param styles

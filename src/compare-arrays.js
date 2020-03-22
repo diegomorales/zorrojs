@@ -1,5 +1,8 @@
 /**
- * Compares two arrays.
+ * @function
+ * @memberof module:zorrojs
+ *
+ * @desc Compares two arrays.
  *
  * Arrays are equal if they have same length and equal items in the same order.
  *

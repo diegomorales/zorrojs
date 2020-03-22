@@ -1,7 +1,10 @@
 import { translateValue } from './translate-value'
 
 /**
- * Animate multiple props on an element
+ * @function
+ * @memberof module:zorrojs
+ *
+ * @desc Animate multiple props on an element
  * (Heavily inspired by GSAPs TweenLite.to method.)
  *
  * @param {Array|Element} el
