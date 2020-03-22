@@ -30,6 +30,7 @@ import { clearStyles } from './src/clear-styles'
 import { str2dom } from './src/str-2-dom'
 import { merge } from './src/merge'
 import { completeAssign } from './src/complete-assign'
+import { compareArrays } from './src/compare-arrays'
 
 export {
   toDBFS,
@@ -57,5 +58,6 @@ export {
   clearStyles,
   str2dom,
   merge,
-  completeAssign
+  completeAssign,
+  compareArrays
 }
