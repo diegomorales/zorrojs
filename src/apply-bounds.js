@@ -2,12 +2,12 @@
  * @function
  * @memberof module:zorrojs
  *
- * @desc Apply Bounds to a numeric value.
+ * @desc Clamp a numeric value.
  *
  * @param {number} value - Number
  * @param {number} lowerBound - Lower bound
  * @param {number} upperBound - Upper bound
- * @returns {number} Processed value
+ * @returns {number} Clamped value
  */
 export const applyBounds = (value, lowerBound, upperBound) => {
   if (value < lowerBound) {

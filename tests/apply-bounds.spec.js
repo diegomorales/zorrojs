@@ -1,5 +1,5 @@
 const test = require('tape')
-const applyBounds = require('../').applyBounds
+const applyBounds = require('../').clamp
 
 test('"applyBounds" method', (t) => {
   t.plan(3)

@@ -36,6 +36,7 @@ export {
   animateProps,
   applyBounds,
   arc,
+  applyBounds as clamp,
   clearStyles,
   compareArrays,
   completeAssign,
