@@ -22,14 +22,14 @@
     "url": "https://github.com/diegomorales/zorrojs.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/register": "^7.8.6",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
     "browser-env": "^3.3.0",
-    "jsdoc-to-markdown": "^5.0.3",
+    "jsdoc-to-markdown": "^6.0.1",
     "pre-commit": "^1.2.2",
-    "standard": "^14.3.3",
+    "standard": "^14.3.4",
     "tap-spec": "^5.0.0",
-    "tape": "^4.13.2"
+    "tape": "^5.0.1"
   }
 }
